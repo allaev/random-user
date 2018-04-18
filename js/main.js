@@ -14,25 +14,27 @@ btn.addEventListener("click", function(){
   .catch(printError)
 })
 
-function handleErrors(request){
- if(!request.ok){
-   throw Error(request.status);
+function handleErrors(res){
+ if(!res.ok){
+   throw Error(res.status);
  }
-  return request;
+  return res;
 }
 
-function parseJSON(request){
-  return request.json();
+function parseJSON(res){
+  return res.json().then(function(parsedData){
+    return parsedData.results[0];
+  })
 }
 
-function updateProfile(request){
-  avatar.src = request.results[0].picture.medium;
-  fullname.innerText = request.results[0].name.first;
-  username.innerText = request.results[0].login.username;
-  email.innerText = request.results[0].email;
-  city.innerText = request.results[0].location.city;
+function updateProfile(data){
+  avatar.src = data.picture.medium;
+  fullname.innerText = data.name.first + " " + data.name.last;
+  username.innerText = data.login.username;
+  email.innerText = data.email;
+  city.innerText = data.location.city;
 }
 
-function printError(error){
-  console.log(error);
+function printError(err){
+  console.log(err);
 }
