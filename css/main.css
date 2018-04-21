@@ -82,3 +82,7 @@ button {
 .footer:hover {
   background: #1abc9c;
 }
+
+#fullname, #city {
+  text-transform:capitalize;
+}
