@@ -1,4 +1,4 @@
-# random-user
+# random-user ![CI status](https://img.shields.io/badge/style-flat-green.svg?longCache=true&style=flat)
 
 JS AJAX Random User Generator
 ### [Live Demo](http://github.allaev.com/random-user/) :point_left:
