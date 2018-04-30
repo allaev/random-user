@@ -10,4 +10,4 @@ JS AJAX Random User Generator
 
 ![random-user_screenshot](https://user-images.githubusercontent.com/34710484/39095746-0d8cc3ea-465f-11e8-9426-596d998397d7.jpg)
 ## Description
-Click "Next User!" button to generate a new fictional user
+Press "Next User!" button to generate a new fictional user
